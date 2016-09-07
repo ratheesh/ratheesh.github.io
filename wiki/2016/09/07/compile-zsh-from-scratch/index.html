@@ -39,27 +39,30 @@ This is based on <a href="https://gist.github.com/m45t3r/9790552">https://gist.g
 <div id="outline-container-orgheadline1" class="outline-2">
 <h2 id="orgheadline1">Procedure to build and install on Linux Ubuntu based systems</h2>
 <div class="outline-text-2" id="text-orgheadline1">
+<p>
+Enter following command in terminal shell
+</p>
+
 <div class="org-src-container">
 
-<pre class="src src-bash">sudo apt-get install -y git-core gcc make autoconf yodl
-libncursesw5-dev texinfo checkinstall
-git clone git://git.code.sf.net/p/zsh/code zsh; cd zsh
+<pre class="src src-bash">$ sudo apt-get install -y git-core gcc make autoconf yodl libncursesw5-dev texinfo checkinstall
+$ git clone git://git.code.sf.net/p/zsh/code zsh; cd zsh
 
 # Get lastest stable version, but you can change to any valid branch/tag/commit id
-BRANCH=$(git describe --abbrev=0 --tags)
+$ BRANCH=$(git describe --abbrev=0 --tags)
 
 # Get version number, and revision/commit id when this is available
-ZSH_VERSION=$(echo $BRANCH | cut -d '-' -f2,3,4)
+$ ZSH_VERSION=$(echo $BRANCH | cut -d '-' -f2,3,4)
 
 # Go to desired branch
-git checkout $BRANCH
+$ git checkout $BRANCH
 
 # Make configure
-./Util/preconfig
+$ ./Util/preconfig
 
 # Options from Ubuntu Zsh package rules file (http://launchpad.net/ubuntu/+source/zsh)
 # Updated to zsh 5.0.2 on Trusty Tahr (pre-release)
-./configure --prefix=/usr \
+$ ./configure --prefix=/usr \
             --mandir=/usr/share/man \
             --bindir=/bin \
             --infodir=/usr/share/info \
@@ -79,13 +82,13 @@ git checkout $BRANCH
             LDFLAGS="-Wl,--as-needed -g -Wl,-Bsymbolic-functions -Wl,-z,relro"
 
 # Compile, test and install
-make
-make check
-sudo checkinstall -y --pkgname=zsh --pkgversion=$ZSH_VERSION --pkglicense=MIT make install install.info 
+$ make
+$ make check
+$ sudo checkinstall -y --pkgname=zsh --pkgversion=$ZSH_VERSION --pkglicense=MIT make install install.info 
 
 # Make zsh the default shell
-sudo sh -c "echo /bin/zsh &gt;&gt; /etc/shells"
-chsh -s /bin/zsh
+$ sudo sh -c "echo /bin/zsh &gt;&gt; /etc/shells"
+$ chsh -s /bin/zsh
 </pre>
 </div>
 </div>
