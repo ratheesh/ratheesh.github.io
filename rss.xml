@@ -4,10 +4,17 @@
     <title>org-page</title>
     <link>http://ratheesh.github.io/</link>
     <description>static site generator</description>
-    <pubDate>Wed, 14 Sep 2016 17:15:59 IST</pubDate>
-    <lastBuildDate>Wed, 14 Sep 2016 17:15:59 IST</lastBuildDate>
+    <pubDate>Wed, 14 Sep 2016 17:37:22 IST</pubDate>
+    <lastBuildDate>Wed, 14 Sep 2016 17:37:22 IST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Org-page static site generator (https://github.com/kelvinh/org-page)</generator>
+    <item>
+      <title>ನನ್ನ ಮೊದಲ ಕನ್ನಡ ಬ್ಲಾಗ್</title>
+      <link>http://ratheesh.github.io/ಕನ್ನಡ/2016/09/14/ನನ್ನ-ಮೊದಲ-ಕನ್ನಡ-ಬ್ಸಾಗ್</link>
+      <description><![CDATA[test post]]></description>
+      <pubDate>2016-09-14</pubDate>
+      <guid>http://ratheesh.github.io/ಕನ್ನಡ/2016/09/14/ನನ್ನ-ಮೊದಲ-ಕನ್ನಡ-ಬ್ಸಾಗ್</guid>
+    </item>
     <item>
       <title>Compile ZSH from scratch</title>
       <link>http://ratheesh.github.io/wiki/2016/09/07/compile-zsh-from-scratch</link>
